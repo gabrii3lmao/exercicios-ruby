@@ -26,4 +26,22 @@ def is_palindromo(palavra)
 return false
 end
 
-print(is_palindromo("ararar"));
+#print(is_palindromo("ararar"));
+#ordernar_personalizado
+def ordenar_personalizado(arr)
+	sorted_arr = arr.sort_by{|str| [str.length, str]}
+	sorted_arr.uniq
+end
+
+#print(ordenar_personalizado(["abc", "ab", "abcd", "efg", "a"]))
+
+#palindromo avançado
+
+def palindromo_avançado(frase)
+	frase.split(' ').join.downcase == frase.split(' ').join.downcase.reverse
+end
+
+#puts(palindromo_avançado("A base do teto desaba"))
+
+#FIZZBUZZ
+puts (1..100).map{ |i| i % 3 == 0 && i % 5 == 0 ? "FizzBuzz" : i % 3 == 0 ? "Fizz" : i % 5 == 0 ? "Buzz" : i.to_s}.join("\n")
